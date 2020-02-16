@@ -77,6 +77,9 @@ namespace biovault {
 			(*this) = bfloat16_t{ float{*this} + float{a} };
 			return *this;
 		}
+		
+		uint16_t raw_bits() { return raw_bits_; }
+
 	};
 
 	static_assert(sizeof(bfloat16_t) == 2, "bfloat16_t must be 2 bytes");
